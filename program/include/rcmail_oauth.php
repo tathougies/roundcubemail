@@ -267,6 +267,8 @@ class rcmail_oauth
                                     'Accept' => 'application/json',
                                 ],
                         ]);
+                     
+                        error_log("Requesting token with authorization $authorization");
 
                         $identity = \GuzzleHttp\json_decode($identity_response->getBody(), true);
 
